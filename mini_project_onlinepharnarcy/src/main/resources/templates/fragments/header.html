@@ -55,7 +55,9 @@
                     </ul>
                 </li>
 
-                <li><a href="/board/boardList">Board</a></li>
+                <th:block th:if="${session.mdto != null}">
+                    <li><a href="/board/boardList">Board</a></li>
+                </th:block>
 
                 <th:block th:if="${session.mdto == null}">
                     <li><a href="/user/login">Login</a></li>
