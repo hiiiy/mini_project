@@ -1,0 +1,78 @@
+@charset "UTF-8";
+
+/* 헤더 레이아웃 */
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    padding: 0 40px;
+    background-color: white;
+    border-bottom: 1px solid #ddd;
+}
+
+/* 중앙 정렬된 메뉴와 로고 */
+.navbar-center {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* 로고 이미지 */
+.navbar-brand img {
+    height: 24px;
+    object-fit: contain;
+}
+
+/* 네비게이션 메뉴 */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    list-style: none;
+    position: relative;
+}
+
+/* 기본 링크 스타일 */
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #007aff;
+}
+
+/* 메가 메뉴 스타일 */
+.mega-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 10px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.mega-menu li {
+    padding: 5px 0;
+}
+
+.mega-menu a {
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.mega-menu a:hover {
+    color: #007aff;
+}
