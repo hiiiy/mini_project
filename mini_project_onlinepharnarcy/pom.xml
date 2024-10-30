@@ -5,13 +5,14 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.3.5</version>
+		<version>3.1.5</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.hk</groupId>
-	<artifactId>miniproject_online_pharmacy</artifactId>
+	<groupId>com.hk.board</groupId>
+	<artifactId>mini_project_onlinepharnarcy</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>miniproject_online_pharmacy</name>
+	<packaging>war</packaging>
+	<name>18_login_board_springbootMVC</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>17</java.version>
@@ -179,4 +180,5 @@
 			</plugin>
 		</plugins>
 	</build>
+
 </project>
