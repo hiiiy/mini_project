@@ -1,41 +1,29 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org"
-	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
-	  layout:decorate="~{layouts/layout}">
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/layout}">
 <head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-<script type="text/javascript">
-
-</script>
-<style type="text/css">
-
-</style>
+    <meta charset="UTF-8">
+    <title>Potion Online Pharmacy - Home</title>
+    <link rel="stylesheet" th:href="@{/css/home.css}">
 </head>
 <body>
-<div layout:fragment="content">
-<h1>HOME</h1>
-<th:block th:if="${session.mdto==null}">
-	<p>
-		<a href="/user/login">SignIn</a>
-		<a href="/user/addUser">SignUp</a>
-	</p>
-</th:block>
-<th:block th:unless="${session.mdto==null}">
-	<p>
-		<span th:text="${session.mdto.role}"></span>
-		<span th:text="${session.mdto.id}"></span>
-		<a href="/user/logout">로그아웃</a>
-	</p>
-</th:block>
-	<p><a href="/board/boardList">게시판</a></p>
-</div>
+    <div layout:fragment="content" class="content">
+        <h1>Potion Online Pharmacy</h1>
+        <div class="card-container">
+            <div class="card">
+                <h3>Headache Relief</h3>
+                <p>Effective relief for migraines and headaches.</p>
+            </div>
+            <div class="card">
+                <h3>Cold & Flu</h3>
+                <p>Stay healthy during the flu season.</p>
+            </div>
+            <div class="card">
+                <h3>Vitamins & Supplements</h3>
+                <p>Boost your immunity with essential vitamins.</p>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
-
-
-
-
-
-
-

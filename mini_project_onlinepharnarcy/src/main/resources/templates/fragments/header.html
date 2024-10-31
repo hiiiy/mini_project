@@ -1,36 +1,94 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-
-<style type="text/css">
-	
-</style>
+    <meta charset="UTF-8">
+    <title>Header - Potion Online Pharmacy</title>
+    <link rel="stylesheet" th:href="@{/css/header.css}">
 </head>
 <body>
-<header th:fragment="header" class="header">
-   <nav class="navbar navbar-inverse navbar-fixed-top">
-	<div class="container">
-	<div class="navbar-header">
-	  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-	    <span class="sr-only">Toggle navigation</span>
-	    <span class="icon-bar"></span>
-	    <span class="icon-bar"></span>
-	    <span class="icon-bar"></span>
-	  </button>
-	  <a class="navbar-brand" href="/">MAIN</a>
-	</div>
-	<div id="navbar" class="collapse navbar-collapse">
-	  <ul class="nav navbar-nav">
-	    <li class="active"><a href="#">Home</a></li>
-	    <li><a href="#about">About</a></li>
-	    <li><a href="#">나의정보</a></li>
-	  </ul>
-	</div>
-	</div>
-</nav>
-  </header>
-  <div style="height: 50px;"></div>
+    <header th:fragment="header" class="navbar">
+        <!-- 로고와 메뉴를 중앙에 배치 -->
+        <div class="navbar-center">
+            <a href="/" class="navbar-brand">
+                <img src="/images/logo.png" alt="Potion Online Pharmacy Logo" />
+            </a>
+
+            <ul class="nav-links">
+                <li class="menu-item">
+                    <a href="#">Store</a>
+                    <ul class="mega-menu">
+                        <li><a href="#">Featured</a></li>
+                        <li><a href="#">Popular</a></li>
+                        <li><a href="#">New Arrivals</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item">
+                    <a href="#">두통약</a>
+                    <ul class="mega-menu">
+                        <li><a href="#">아스피린</a></li>
+                        <li><a href="#">타이레놀</a></li>
+                        <li><a href="#">이부프로펜</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item">
+                    <a href="#">감기약</a>
+                    <ul class="mega-menu">
+                        <li><a href="#">콜드렉스</a></li>
+                        <li><a href="#">판콜</a></li>
+                        <li><a href="#">자이렉스</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item">
+                    <a href="#">피로회복</a>
+                    <ul class="mega-menu">
+                        <li><a href="#">홍삼</a></li>
+                        <li><a href="#">비타민C</a></li>
+                        <li><a href="#">박카스</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item">
+                    <a href="#">영양제</a>
+                    <ul class="mega-menu">
+                        <li><a href="#">멀티비타민</a></li>
+                        <li><a href="#">오메가3</a></li>
+                        <li><a href="#">프로바이오틱스</a></li>
+                    </ul>
+                </li>
+
+                <th:block th:if="${session.mdto != null}">
+                    <li><a href="/board/boardList">Board</a></li>
+                </th:block>
+
+                <th:block th:if="${session.mdto == null}">
+                    <li><a href="/user/login">Login</a></li>
+                    <li><a href="/user/addUser">Sign Up</a></li>
+                </th:block>
+                <th:block th:unless="${session.mdto == null}">
+                    <li><span th:text="${session.mdto.role}"></span></li>
+                    <li><span th:text="${session.mdto.id}"></span></li>
+                    <li><a href="/user/logout">Logout</a></li>
+                </th:block>
+            </ul>
+        </div>
+    </header>
+
+    <script>
+        // 드롭다운 메뉴 표시/숨기기
+        document.querySelectorAll('.menu-item').forEach(item => {
+            item.addEventListener('mouseover', () => {
+                const megaMenu = item.querySelector('.mega-menu');
+                if (megaMenu) {
+                    megaMenu.style.display = 'block';
+                }
+            });
+
+            item.addEventListener('mouseout', () => {
+                const megaMenu = item.querySelector('.mega-menu');
+                if (megaMenu) {
+                    megaMenu.style.display = 'none';
+                }
+            });
+        });
+    </script>
 </body>
 </html>
