@@ -18,7 +18,7 @@ public class WebMvcConfig implements WebMvcConfigurer{
 									,"/board/boardDetail"
 									,"/board/mulDel"
 									,"/board/boardUpdate"
-						            ,"/","/user/**","/css/**","/js/**","/images/**");
+						            ,"/","/user/**","/css/**","/js/**","/images/**","/page/**");
 	
 //		registry.addInterceptor(new LoginInterceptor())
 //		.order(2)

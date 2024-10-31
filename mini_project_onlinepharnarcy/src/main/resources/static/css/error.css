@@ -1,0 +1,51 @@
+/* 전체 페이지 스타일 */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* 오류 페이지 컨테이너 */
+.error-container {
+    text-align: center;
+    max-width: 600px;
+    padding: 20px;
+}
+
+/* 제목 스타일 */
+.error-title {
+    font-size: 2.5em;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* 오류 메시지 스타일 */
+.error-message {
+    font-size: 1.2em;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* 메인으로 돌아가기 버튼 스타일 */
+.back-home-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #007aff;
+    text-decoration: none;
+    border: 1px solid #007aff;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.back-home-btn:hover {
+    background-color: #007aff;
+    color: #fff;
+}

@@ -9,21 +9,79 @@
 </head>
 <body>
     <div layout:fragment="content" class="content">
-        <h1>Potion Online Pharmacy</h1>
-        <div class="card-container">
-            <div class="card">
-                <h3>Headache Relief</h3>
-                <p>Effective relief for migraines and headaches.</p>
+        <!-- 슬라이드 컨테이너 -->
+        <div class="slider-container">
+            <!-- 메인 제목이 사진 위에 겹쳐서 표시되도록 -->
+            <div class="overlay-text">
+                <h1>Potion Online Pharmacy</h1>
+                <p>Your trusted source for health solutions</p>
             </div>
-            <div class="card">
-                <h3>Cold & Flu</h3>
-                <p>Stay healthy during the flu season.</p>
+            
+            <!-- 슬라이드 버튼들 -->
+            <button class="slider-btn prev-btn" onclick="moveSlide(-1)">&#10094;</button>
+            
+            <!-- 슬라이더 -->
+            <div class="slider" id="slider">
+                <!-- 카드 1 -->
+                <div class="card">
+                    <img src="/images/headache-relief.jpg" alt="Headache Relief">
+                    <div class="text-overlay">
+                        <h3>Headache Relief</h3>
+                        <p>Effective relief for migraines and headaches.</p>
+                    </div>
+                </div>
+                <!-- 카드 2 -->
+                <div class="card">
+                    <img src="/images/cold-flu.jpg" alt="Cold & Flu">
+                    <div class="text-overlay">
+                        <h3>Cold & Flu</h3>
+                        <p>Stay healthy during the flu season.</p>
+                    </div>
+                </div>
+                <!-- 카드 3 -->
+                <div class="card">
+                    <img src="/images/vitamins.jpg" alt="Vitamins & Supplements">
+                    <div class="text-overlay">
+                        <h3>Vitamins & Supplements</h3>
+                        <p>Boost your immunity with essential vitamins.</p>
+                    </div>
+                </div>
             </div>
-            <div class="card">
-                <h3>Vitamins & Supplements</h3>
-                <p>Boost your immunity with essential vitamins.</p>
-            </div>
+
+            <button class="slider-btn next-btn" onclick="moveSlide(1)">&#10095;</button>
         </div>
+        <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll(".card");
+        const slider = document.getElementById("slider");
+
+        function moveSlide(n) {
+            currentSlide = (currentSlide + n + slides.length) % slides.length;
+            updateSlidePosition();
+            resetAutoSlide();
+        }
+
+        function updateSlidePosition() {
+            slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+        }
+
+        function autoSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            updateSlidePosition();
+        }
+
+        function resetAutoSlide() {
+            clearInterval(autoSlideInterval);
+            autoSlideInterval = setInterval(autoSlide, 3000);
+        }
+
+        // 페이지가 로드되면 자동 슬라이드 시작
+        let autoSlideInterval = setInterval(autoSlide, 3000);
+
+        // 마우스를 슬라이더 위에 올리면 자동 슬라이드를 멈추고, 마우스를 치우면 다시 시작
+        slider.addEventListener('mouseover', () => clearInterval(autoSlideInterval));
+        slider.addEventListener('mouseout', () => resetAutoSlide());
+    </script>
     </div>
 </body>
 </html>

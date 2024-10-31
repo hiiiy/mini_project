@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" 
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/layout}">
+<head>
+    <meta charset="UTF-8">
+    <title>Store - Potion Online Pharmacy</title>
+    <link rel="stylesheet" th:href="@{/css/header.css}">
+    <link rel="stylesheet" th:href="@{/css/store.css}">
+</head>
+<body>
+	<div layout:fragment="content" class="content">
+    <main>
+        <h1>Store</h1>
+        <p>Browse our selection of medicines by category.</p>
+
+        <!-- 두통약 섹션 -->
+        <section class="category-section">
+            <h2>두통약</h2>
+            <div class="category-grid">
+                <div class="medicine-card">
+                    <h3>아스피린</h3>
+                    <p>효능: 두통 및 통증 완화</p>
+                    <p>가격: ₩5,000</p>
+                </div>
+                <div class="medicine-card">
+                    <h3>타이레놀</h3>
+                    <p>효능: 두통 및 발열 해소</p>
+                    <p>가격: ₩6,000</p>
+                </div>
+                <div class="medicine-card">
+                    <h3>이부프로펜</h3>
+                    <p>효능: 두통 및 염증 완화</p>
+                    <p>가격: ₩7,000</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 감기약 섹션 -->
+        <section class="category-section">
+            <h2>감기약</h2>
+            <div class="category-grid">
+                <div class="medicine-card">
+                    <h3>콜드렉스</h3>
+                    <p>효능: 감기 및 비염 완화</p>
+                    <p>가격: ₩8,000</p>
+                </div>
+                <div class="medicine-card">
+                    <h3>판콜</h3>
+                    <p>효능: 감기 증상 완화</p>
+                    <p>가격: ₩9,000</p>
+                </div>
+                <div class="medicine-card">
+                    <h3>자이렉스</h3>
+                    <p>효능: 독감 및 감기 해소</p>
+                    <p>가격: ₩10,000</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 피로회복 섹션 -->
+        <section class="category-section">
+            <h2>피로회복</h2>
+            <div class="category-grid">
+                <div class="medicine-card">
+                    <h3>홍삼</h3>
+                    <p>효능: 면역력 강화 및 피로회복</p>
+                    <p>가격: ₩15,000</p>
+                </div>
+                <div class="medicine-card">
+                    <h3>비타민C</h3>
+                    <p>효능: 피로회복 및 항산화</p>
+                    <p>가격: ₩12,000</p>
+                </div>
+                <div class="medicine-card">
+                    <h3>박카스</h3>
+                    <p>효능: 피로회복 및 에너지 증진</p>
+                    <p>가격: ₩2,000</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 영양제 섹션 -->
+        <section class="category-section">
+            <h2>영양제</h2>
+            <div class="category-grid">
+                <div class="medicine-card">
+                    <h3>멀티비타민</h3>
+                    <p>효능: 종합 영양 보충</p>
+                    <p>가격: ₩20,000</p>
+                </div>
+                <div class="medicine-card">
+                    <h3>오메가3</h3>
+                    <p>효능: 혈액 순환 개선</p>
+                    <p>가격: ₩18,000</p>
+                </div>
+                <div class="medicine-card">
+                    <h3>프로바이오틱스</h3>
+                    <p>효능: 장 건강 증진</p>
+                    <p>가격: ₩22,000</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    </div>
+</body>
+</html>

@@ -1,25 +1,15 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-<script type="text/javascript">
-
-</script>
-<style type="text/css">
-
-</style>
+    <meta charset="UTF-8">
+    <title>Error - Potion Online Pharmacy</title>
+    <link rel="stylesheet" th:href="@{/css/error.css}">
 </head>
 <body>
-<!-- Spring boot에서는 오류발생시 자체적으로 /error -->
-<h1>페이지 오류</h1>
-<p th:text="${msg}"></p>
-<p><a th:href="@{/}">MAIN</a></p>
+    <div class="error-container">
+        <h1 class="error-title">페이지 오류</h1>
+        <p class="error-message" th:text="${msg}">죄송합니다. 페이지를 로드하는 중 오류가 발생했습니다.</p>
+        <a th:href="@{/}" class="back-home-btn">홈으로 돌아가기</a>
+    </div>
 </body>
 </html>
-
-
-
-
-
-
