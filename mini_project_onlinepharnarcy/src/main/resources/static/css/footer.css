@@ -2,8 +2,8 @@
 
 /* 푸터 레이아웃 */
 #footer {
-    background-color: #3c3c3c;
-    color: white;
+    background-color: rgb(255, 255, 255);
+    color: black;
     font-size: 12px;
     height: 30px;
     line-height: 30px;

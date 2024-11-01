@@ -5,10 +5,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/page")
 @Controller
-public class HeadacheController {
-	@GetMapping("/headache")
-    public String headachePage() {
-        return "page/headache"; 
+public class ColdController {
+	@GetMapping("/cold")
+    public String coldPage() {
+        return "page/cold"; 
     }
 }
-

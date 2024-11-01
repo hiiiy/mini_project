@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" 
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/layout}">
+<head>
+    <meta charset="UTF-8">
+    <title>감기약 - Potion Online Pharmacy</title>
+    <link rel="stylesheet" th:href="@{/css/header.css}">
+    <link rel="stylesheet" th:href="@{/css/cold.css}">
+</head>
+<body>
+    <!-- 공통 헤더 레이아웃이 있다면 불러오기 -->
+    <div layout:fragment="content" class="content">
+
+    <section class="intro">
+        <h1>감기약</h1>
+        <p>효과적인 감기 치료를 위한 약품을 소개합니다.</p>
+    </section>
+
+    <main class="container">
+        <!-- 콜드렉스 카드 -->
+        <div class="medicine-card">
+            <img src="/images/coldrex.jpg" alt="콜드렉스">
+            <h2>콜드렉스</h2>
+            <p>효과: 감기 및 비염 완화</p>
+            <p>가격: ₩8,000</p>
+        </div>
+
+        <!-- 판콜 카드 -->
+        <div class="medicine-card">
+            <img src="/images/pancol.jpg" alt="판콜">
+            <h2>판콜</h2>
+            <p>효과: 감기 증상 완화</p>
+            <p>가격: ₩9,000</p>
+        </div>
+
+        <!-- 자이렉스 카드 -->
+        <div class="medicine-card">
+            <img src="/images/pantech.jpg" alt="판텍">
+            <h2>판텍</h2>
+            <p>효과: 종합 감기</p>
+            <p>가격: ₩6,000</p>
+        </div>
+    </main>
+    </div>
+</body>
+</html>
