@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" 
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/layout}">
+<head>
+    <meta charset="UTF-8">
+    <title>두통약 - Potion Online Pharmacy</title>
+    <link rel="stylesheet" th:href="@{/css/header.css}">
+    <link rel="stylesheet" th:href="@{/css/headache.css}">
+</head>
+<body>
+    <!-- 공통 헤더 레이아웃이 있다면 불러오기 -->
+    <div layout:fragment="content" class="content">
+
+    <section class="intro">
+        <h1>두통약</h1>
+        <p>효과적인 두통 치료를 위한 약품을 소개합니다.</p>
+    </section>
+
+    <main class="container">
+        <!-- 아스피린 카드 -->
+        <div class="medicine-card">
+            <img src="/images/aspirin.jpg" alt="아스피린">
+            <h2>아스피린</h2>
+            <p>효과: 두통 및 통증 완화</p>
+            <p>가격: ₩5,000</p>
+        </div>
+
+        <!-- 타이레놀 카드 -->
+        <div class="medicine-card">
+            <img src="/images/tylenol.jpg" alt="타이레놀">
+            <h2>타이레놀</h2>
+            <p>효과: 두통 및 발열 해소</p>
+            <p>가격: ₩6,000</p>
+        </div>
+
+        <!-- 이부프로펜 카드 -->
+        <div class="medicine-card">
+            <img src="/images/ibuprofen.jpg" alt="이부프로펜">
+            <h2>이부프로펜</h2>
+            <p>효과: 두통 및 염증 완화</p>
+            <p>가격: ₩7,000</p>
+        </div>
+    </main>
+    </div>
+</body>
+</html>
